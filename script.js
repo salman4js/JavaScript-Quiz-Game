@@ -100,24 +100,24 @@ const questions = [
       correctAns : '4'
     },
     {
-      question: 'Who is the best YouTuber?',
+      question: 'What is 3 + 3?',
       answers: [
-        { text: 'Web Dev Simplified' },
-        { text: 'Traversy Media' },
-        { text: 'Dev Ed' },
-        { text: 'Fun Fun Function' }
+        { text: '4' },
+        { text: '6' },
+        { text: '7' },
+        { text: '8' }
       ],
-      correctAns : 'Dev Ed'
+      correctAns : '6'
     },
     {
-      question: 'Is web development fun?',
+      question: 'Who invented Linux?',
       answers: [
-        { text: 'Kinda' },
-        { text: 'YES!!!'},
-        { text: 'Um no' },
-        { text: 'IDK'}
+        { text: 'Bill Gates' },
+        { text: 'Linus Torvalds'},
+        { text: 'Steve Jobs' },
+        { text: 'None of the above'}
       ],
-      correctAns : 'YES!!!'
+      correctAns : 'Linus Torvalds'
     },
     {
       question: 'What is 4 * 2?',
