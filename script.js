@@ -10,6 +10,8 @@ var answerbtns = document.getElementById('answer-button');
 
 var score = document.getElementById('score');
 
+var scorescored = document.getElementById("scoreresult");
+
 var blah = document.getElementById('controls');
 
 let shuffle, currrentindex;
@@ -30,6 +32,8 @@ startbutton.addEventListener("click", startGame);
 function startGame() {
     questionContainers.classList.remove('hide');
     startbutton.classList.add("hide");
+    scorescored.classList.add("hide");
+    overallScore = 0;
     shuffle = questions.sort(() => Math.random() - .5)
     currrentindex = 0;
     console.log(shuffle, currrentindex);
@@ -44,8 +48,8 @@ function setQuestions() {
 function resetGame(){
     while(answerbtns.firstChild){
         answerbtns.removeChild(answerbtns.firstChild);
-    }
-;}
+      }
+}
 
 function showQuestions(ques) {
     questiontoshow.innerText = ques.question
@@ -54,10 +58,8 @@ function showQuestions(ques) {
       startbutton.classList.remove('hide');
       startbutton.innerText = "Restart Quiz";
       questionContainers.classList.add('hide');
-      var scorescored = document.createElement('p');
+      scorescored.classList.remove("hide");
       scorescored.innerText = "Score Scored : " +overallScore;
-      scorescored.classList.add('score');
-      blah.appendChild(scorescored);
     } else {
     ques.answers.forEach(element => {
         const button = document.createElement('button');
@@ -100,24 +102,24 @@ const questions = [
       correctAns : '4'
     },
     {
-      question: 'What is 3 + 3?',
+      question: 'Who is the best YouTuber?',
       answers: [
-        { text: '4' },
-        { text: '6' },
-        { text: '7' },
-        { text: '8' }
+        { text: 'Web Dev Simplified' },
+        { text: 'Traversy Media' },
+        { text: 'Dev Ed' },
+        { text: 'Fun Fun Function' }
       ],
-      correctAns : '6'
+      correctAns : 'Dev Ed'
     },
     {
-      question: 'Who invented Linux?',
+      question: 'Is web development fun?',
       answers: [
-        { text: 'Bill Gates' },
-        { text: 'Linus Torvalds'},
-        { text: 'Steve Jobs' },
-        { text: 'None of the above'}
+        { text: 'Kinda' },
+        { text: 'YES!!!'},
+        { text: 'Um no' },
+        { text: 'IDK'}
       ],
-      correctAns : 'Linus Torvalds'
+      correctAns : 'YES!!!'
     },
     {
       question: 'What is 4 * 2?',
